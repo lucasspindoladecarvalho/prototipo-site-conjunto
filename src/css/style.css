@@ -1,6 +1,7 @@
 * {
     max-width: 1200px;
     margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a {
@@ -128,6 +129,9 @@ a {
     scale: 1;
     transition-duration: 0.6s;
 }
+
+/*NAVBAR*/
+
 .nav-bg{
     z-index: -1;
     position: absolute;
@@ -165,7 +169,7 @@ a {
     margin: 0;
     width: 120px;
     height: 50px;
-    transition: 100ms;
+    transition: 1000ms;
 }
 .nav-btn:before{
     position: absolute;
@@ -184,20 +188,24 @@ a {
     height: 0;
     border: solid 61px transparent;
     border-top: solid 10px yellow;
-    transition: 100ms;
+    transition: 1000ms;
 }
 .nav-btn::after{
+    z-index: -1;
     position: absolute;
     content: '';
+    opacity: 0;
     width: 0;
     height: 0;
     top: 99px;
-    margin-left: 120px;
+    margin-left: 100px;
     border: solid 3px transparent;
 }
 .nav-btn:hover:after{
+    z-index: -1;
     position: absolute;
     content: '';
+    opacity: 1;
     width: 0;
     height: 0;
     top: 99px;
@@ -205,5 +213,36 @@ a {
     border: solid 3px transparent;
     border-left: solid 3px rgb(170, 170, 0);
     border-bottom: solid 3px rgb(170, 170, 0);
-    transition: 500ms;
+    transition: 1000ms;
+}
+
+/* CARDS */
+
+.card{
+    display: flex;
+    width: 80%;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 40px;
+    box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.3);
+}
+.banner{
+    flex-shrink: 0;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.4);
+    background-size: cover;
+}
+
+.conteudo{
+    margin: 40px;
+    text-align: justify;
+}
+.img1{
+    background-image: url(/prototipo-site-conjunto/src/image/img1.jpg);
+}
+
+.img2{
+    background-image: url(/prototipo-site-conjunto/src/image/img2.jpg);
 }
